@@ -102,12 +102,29 @@ a {
   color: var(--green);
   background: transparent;
   padding: 10px 14px;
+  font: inherit;
   font-weight: 800;
   cursor: pointer;
 }
 
 .menu-toggle {
   display: none;
+}
+
+.language-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.language-group .lang-switch {
+  min-width: 42px;
+  padding: 9px 11px;
+}
+
+.language-group .lang-switch.active {
+  color: var(--white);
+  background: var(--green);
 }
 
 .hero {
@@ -451,6 +468,11 @@ address {
     padding: 18px;
     background: var(--white);
     border-bottom: 1px solid var(--line);
+  }
+
+  .language-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .nav-links.open {
