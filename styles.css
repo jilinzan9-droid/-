@@ -520,6 +520,74 @@ body[dir="rtl"] .carousel-arrow-next {
   border-color: var(--green);
 }
 
+.product-entry-section {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+.product-entry-section .section-heading {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.product-entry-section h2 {
+  font-size: clamp(28px, 3vw, 40px);
+}
+
+.product-entry-section .section-heading p:not(.eyebrow) {
+  max-width: 720px;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.product-entry-section .product-grid {
+  gap: 14px;
+}
+
+.product-entry-section .product-card {
+  gap: 10px;
+  padding: 14px;
+}
+
+.product-entry-section .card-detail-link {
+  gap: 10px;
+}
+
+.product-entry-section .product-card .image-placeholder.has-image {
+  display: block;
+  height: 176px;
+  aspect-ratio: auto;
+}
+
+.product-entry-section .product-card .image-placeholder.has-image img {
+  height: 176px;
+}
+
+.product-entry-section .product-card h3 {
+  font-size: clamp(18px, 1.6vw, 20px);
+  line-height: 1.24;
+}
+
+.product-entry-section .product-card p {
+  display: -webkit-box;
+  overflow: hidden;
+  min-height: 63px;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.product-entry-section .card-actions {
+  gap: 6px;
+}
+
+.product-entry-section .mini-btn {
+  min-height: 34px;
+  padding: 7px 8px;
+  font-size: 12px;
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
@@ -551,6 +619,108 @@ body[dir="rtl"] .capability-list div {
 .capability-list span {
   color: var(--gold);
   font-weight: 900;
+}
+
+.company-presence-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  gap: 34px;
+  align-items: center;
+  background: var(--white);
+  border-top: 1px solid var(--line);
+}
+
+.company-presence-copy {
+  max-width: 780px;
+}
+
+.company-presence-copy h2 {
+  font-size: clamp(30px, 3.5vw, 44px);
+}
+
+.company-presence-copy > p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.company-address-block {
+  margin: 22px 0;
+  padding: 16px 18px;
+  border-left: 4px solid var(--gold);
+  background: var(--panel);
+}
+
+body[dir="rtl"] .company-address-block {
+  border-left: 0;
+  border-right: 4px solid var(--gold);
+}
+
+.company-address-block span {
+  display: block;
+  color: var(--green);
+  font-weight: 900;
+}
+
+.company-address-block address {
+  grid-column: auto;
+  margin-top: 5px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.company-capability-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.company-capability-list div {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.company-capability-list span {
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.company-capability-list strong {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.company-image-frame {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  aspect-ratio: 4 / 3;
+  padding: 18px;
+  border: 1px dashed rgba(16, 32, 38, 0.3);
+  background:
+    linear-gradient(135deg, rgba(15, 107, 87, .12), rgba(200, 155, 60, .12)),
+    var(--panel);
+  color: var(--muted);
+  font-weight: 900;
+  text-align: center;
+}
+
+.company-image-frame.has-image {
+  padding: 0;
+  overflow: hidden;
+  border-style: solid;
+}
+
+.company-entrance-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .market {
@@ -855,7 +1025,8 @@ body[dir="rtl"] .floating-whatsapp {
   .hero,
   .split,
   .contact-section,
-  .detail-layout {
+  .detail-layout,
+  .company-presence-section {
     grid-template-columns: 1fr;
   }
 
@@ -950,6 +1121,52 @@ body[dir="rtl"] .floating-whatsapp {
     width: 40px;
     height: 40px;
     font-size: 28px;
+  }
+
+  .product-entry-section {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+
+  .product-entry-section h2 {
+    font-size: clamp(26px, 8vw, 30px);
+  }
+
+  .product-entry-section .section-heading {
+    margin-bottom: 18px;
+  }
+
+  .product-entry-section .product-card .image-placeholder.has-image {
+    height: 160px;
+  }
+
+  .product-entry-section .product-card .image-placeholder.has-image img {
+    height: 160px;
+  }
+
+  .product-entry-section .product-card h3 {
+    font-size: 18px;
+  }
+
+  .product-entry-section .product-card p {
+    min-height: auto;
+    -webkit-line-clamp: 3;
+  }
+
+  .company-presence-section {
+    gap: 24px;
+  }
+
+  .company-presence-copy h2 {
+    font-size: clamp(27px, 8vw, 34px);
+  }
+
+  .company-capability-list {
+    grid-template-columns: 1fr;
+  }
+
+  .company-image-frame {
+    min-height: 220px;
   }
 
   .metric-strip,
