@@ -853,6 +853,79 @@ body[dir="rtl"] .carousel-arrow-next {
   line-height: 1.1;
 }
 
+body.home-en .product-entry-section {
+  padding-top: 70px;
+  padding-right: clamp(18px, 4vw, 72px);
+  padding-bottom: 78px;
+  padding-left: clamp(18px, 4vw, 72px);
+  background: var(--white);
+}
+
+body.home-en .product-entry-section > * {
+  max-width: 1490px;
+}
+
+body.home-en .product-entry-section .section-heading {
+  max-width: 980px;
+  margin-right: auto;
+  margin-bottom: 64px;
+  margin-left: auto;
+  text-align: center;
+}
+
+body.home-en .product-entry-section .product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+
+body.home-en .product-entry-section .product-card {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.28) 0 6px 16px;
+}
+
+body.home-en .product-entry-section .product-card-media {
+  aspect-ratio: 1 / 1;
+  background: #fff;
+}
+
+body.home-en .product-entry-section .product-card-media img {
+  object-fit: contain;
+  background: #fff;
+}
+
+body.home-en .product-entry-section .product-card h3 {
+  display: block;
+  min-height: 50px;
+  padding: 0 18px;
+  color: #fff;
+  background: #126ad7;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 50px;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body.home-en .product-more-row {
+  display: flex;
+  justify-content: center;
+  max-width: 1490px;
+  margin: 72px auto 0;
+}
+
+body.home-en .product-more-btn {
+  min-width: 264px;
+  min-height: 46px;
+  padding: 12px 32px;
+  border-color: #126ad7;
+  border-radius: 8px;
+  color: #fff;
+  background: #126ad7;
+  font-size: 16px;
+  font-weight: 800;
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
@@ -1682,6 +1755,10 @@ body[dir="rtl"] .floating-whatsapp {
     aspect-ratio: 1 / 1;
   }
 
+  body.home-en .product-entry-section .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .news-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1828,6 +1905,37 @@ body[dir="rtl"] .floating-whatsapp {
     min-height: 28px;
     padding: 4px 3px;
     font-size: 9px;
+  }
+
+  body.home-en .product-entry-section {
+    padding-top: 52px;
+    padding-bottom: 62px;
+  }
+
+  body.home-en .product-entry-section .section-heading {
+    margin-bottom: 34px;
+  }
+
+  body.home-en .product-entry-section .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 16px;
+  }
+
+  body.home-en .product-entry-section .product-card h3 {
+    min-height: 44px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 44px;
+  }
+
+  body.home-en .product-more-row {
+    margin-top: 42px;
+  }
+
+  body.home-en .product-more-btn {
+    min-width: 220px;
+    min-height: 44px;
+    font-size: 14px;
   }
 
   .company-presence-section {
