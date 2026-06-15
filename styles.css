@@ -711,14 +711,14 @@ body[dir="rtl"] .carousel-arrow-next {
 }
 
 .product-entry-section {
-  padding-top: 54px;
+  padding-top: 60px;
   padding-right: clamp(16px, 3vw, 42px);
-  padding-bottom: 54px;
+  padding-bottom: 60px;
   padding-left: clamp(16px, 3vw, 42px);
 }
 
 .product-entry-section > * {
-  max-width: 1240px;
+  max-width: 1140px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -739,34 +739,38 @@ body[dir="rtl"] .carousel-arrow-next {
 }
 
 .product-entry-section .product-grid {
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 30px;
 }
 
 .product-entry-section .product-card {
-  grid-template-columns: 184px minmax(0, 1fr);
-  grid-template-rows: auto 1fr auto;
-  gap: 12px 18px;
-  min-height: 210px;
-  padding: 16px;
-  align-items: start;
+  position: relative;
+  display: block;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 
 .product-entry-section .card-detail-link {
-  display: contents;
+  display: block;
+  gap: 0;
 }
 
 .product-entry-section .product-card-media {
-  grid-column: 1;
-  grid-row: 1 / span 3;
   display: grid;
   place-items: center;
-  width: 184px;
-  height: 146px;
-  padding: 6px;
-  border: 1px dashed rgba(0, 70, 58, 0.25);
-  background:
-    linear-gradient(135deg, rgba(15, 107, 87, 0.08), rgba(200, 155, 60, 0.08)),
-    #f4f8f6;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #f4f8f6;
 }
 
 .product-entry-section .product-card-media span {
@@ -776,41 +780,76 @@ body[dir="rtl"] .carousel-arrow-next {
 }
 
 .product-entry-section .product-card-media img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+  transition: transform 0.35s ease;
+}
+
+.product-entry-section .product-card:hover .product-card-media img {
+  transform: scale(1.05);
 }
 
 .product-entry-section .product-card h3 {
-  grid-column: 2;
-  grid-row: 1;
-  font-size: clamp(18px, 1.6vw, 20px);
-  line-height: 1.24;
+  display: -webkit-box;
+  min-height: 47px;
+  margin: 0;
+  padding: 12px 15px;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--green);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.45;
+  text-align: center;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
 }
 
 .product-entry-section .product-card p {
-  grid-column: 2;
-  grid-row: 2;
-  display: -webkit-box;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
   overflow: hidden;
-  font-size: 14px;
-  line-height: 1.5;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .product-entry-section .card-actions {
-  grid-column: 2;
-  grid-row: 3;
-  align-self: end;
+  position: absolute;
+  right: 10px;
+  bottom: 58px;
+  left: 10px;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 6px;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.product-entry-section .product-card:hover .card-actions,
+.product-entry-section .product-card:focus-within .card-actions {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .product-entry-section .mini-btn {
-  min-height: 32px;
-  padding: 6px 6px;
-  font-size: 11px;
+  min-height: 30px;
+  padding: 5px;
+  border-color: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.92);
+  font-size: 10px;
   line-height: 1.1;
 }
 
@@ -1617,6 +1656,10 @@ body[dir="rtl"] .floating-whatsapp {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .product-entry-section .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .market-grid,
   .parts-grid,
   .detail-grid {
@@ -1634,8 +1677,9 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .product-entry-section .product-card-media {
-    width: 156px;
-    height: 128px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .news-grid {
@@ -1738,15 +1782,15 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .product-entry-section .product-card {
-    grid-template-columns: 132px minmax(0, 1fr);
-    gap: 8px 12px;
-    min-height: 176px;
-    padding: 12px;
+    display: block;
+    min-height: 0;
+    padding: 0;
   }
 
   .product-entry-section .product-card-media {
-    width: 132px;
-    height: 112px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 
   .product-entry-section .product-card-media img {
@@ -1754,24 +1798,36 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .product-entry-section .product-card h3 {
-    font-size: 16px;
+    min-height: 45px;
+    padding: 11px 10px;
+    font-size: 14px;
+    line-height: 1.45;
   }
 
   .product-entry-section .product-card p {
-    min-height: auto;
-    font-size: 13px;
-    -webkit-line-clamp: 3;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .product-entry-section .card-actions {
+    right: 8px;
+    bottom: 54px;
+    left: 8px;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 5px;
+    gap: 4px;
   }
 
   .product-entry-section .mini-btn {
-    min-height: 30px;
-    padding: 5px 4px;
-    font-size: 10px;
+    min-height: 28px;
+    padding: 4px 3px;
+    font-size: 9px;
   }
 
   .company-presence-section {
@@ -1792,7 +1848,6 @@ body[dir="rtl"] .floating-whatsapp {
 
   .metric-strip,
   .trust-band,
-  .product-grid,
   .news-grid,
   .contact-grid,
   .market-grid,
@@ -1802,6 +1857,19 @@ body[dir="rtl"] .floating-whatsapp {
   .page-link-grid,
   .card-actions {
     grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-entry-section .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+  }
+
+  .product-entry-section .card-actions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .footer {
