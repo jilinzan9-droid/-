@@ -280,8 +280,8 @@ body[dir="rtl"] .language-panel {
   display: block;
   width: 100vw;
   max-width: 100vw;
-  height: clamp(520px, 42vw, 620px);
-  min-height: 520px;
+  height: clamp(500px, 39.0625vw, 750px);
+  min-height: 0;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: 0;
@@ -1629,8 +1629,8 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .hero.hero-carousel {
-    height: clamp(520px, 54vw, 620px);
-    min-height: 520px;
+    height: clamp(440px, 48vw, 500px);
+    min-height: 440px;
   }
 
   .product-entry-section .product-card-media {
@@ -1695,13 +1695,13 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .hero.hero-carousel {
-    height: 520px;
-    min-height: 520px;
+    height: 500px;
+    min-height: 500px;
     padding: 0;
   }
 
   .hero-carousel .hero-slide {
-    min-height: 520px;
+    min-height: 500px;
   }
 
   .hero-carousel .hero-copy {
