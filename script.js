@@ -171,3 +171,32 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   reduceMotion.addEventListener?.("change", startAutoplay);
   startAutoplay();
 });
+
+document.querySelectorAll("[data-news-tabs]").forEach((section) => {
+  const tabs = Array.from(section.querySelectorAll("[data-news-tab]"));
+  const panels = Array.from(section.querySelectorAll("[data-news-panel]"));
+  if (!tabs.length || !panels.length) return;
+
+  function activate(target) {
+    tabs.forEach((tab) => {
+      const active = tab.dataset.newsTab === target;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-selected", String(active));
+    });
+    panels.forEach((panel) => {
+      panel.classList.toggle("is-active", panel.dataset.newsPanel === target);
+    });
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activate(tab.dataset.newsTab));
+    tab.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      const index = tabs.indexOf(tab);
+      const nextIndex = event.key === "ArrowRight" ? (index + 1) % tabs.length : (index - 1 + tabs.length) % tabs.length;
+      tabs[nextIndex].focus();
+      activate(tabs[nextIndex].dataset.newsTab);
+    });
+  });
+});
