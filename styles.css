@@ -278,6 +278,7 @@ body[dir="rtl"] .language-panel {
 .hero-carousel {
   position: relative;
   display: block;
+  width: 100%;
   height: clamp(620px, calc(100vh - 104px), 680px);
   min-height: 620px;
   padding: 0;
@@ -311,8 +312,20 @@ body[dir="rtl"] .language-panel {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
+}
+
+.hero-image-placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(120deg, rgba(5, 33, 37, 0.92), rgba(7, 63, 53, 0.78)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 2px, transparent 2px 18px);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
 }
 
 .hero-shade {
@@ -524,6 +537,32 @@ body[dir="rtl"] .carousel-arrow-next {
   aspect-ratio: 18 / 13;
 }
 
+.product-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 200px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px dashed rgba(16, 32, 38, 0.28);
+  background:
+    linear-gradient(135deg, rgba(15, 107, 87, 0.08), rgba(200, 155, 60, 0.08)),
+    #f4f8f6;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.product-card-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
 .detail-image.has-image {
   min-height: 360px;
   aspect-ratio: 18 / 13;
@@ -683,18 +722,18 @@ body[dir="rtl"] .carousel-arrow-next {
   gap: 10px;
 }
 
-.product-entry-section .product-card .image-placeholder.has-image {
+.product-entry-section .product-card-media {
   display: grid;
   place-items: center;
-  height: clamp(180px, 12vw, 210px);
-  aspect-ratio: 16 / 10;
+  min-height: 200px;
+  aspect-ratio: 4 / 3;
   padding: 8px;
   background:
     linear-gradient(135deg, rgba(15, 107, 87, 0.08), rgba(200, 155, 60, 0.08)),
     var(--panel);
 }
 
-.product-entry-section .product-card img {
+.product-entry-section .product-card-media img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -1473,11 +1512,11 @@ body[dir="rtl"] .floating-whatsapp {
     margin-bottom: 18px;
   }
 
-  .product-entry-section .product-card .image-placeholder.has-image {
-    height: clamp(170px, 48vw, 200px);
+  .product-entry-section .product-card-media {
+    min-height: 180px;
   }
 
-  .product-entry-section .product-card img {
+  .product-entry-section .product-card-media img {
     height: 100%;
   }
 
