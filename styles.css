@@ -941,15 +941,15 @@ body.home-en .company-presence-copy {
 }
 
 body.home-en .company-presence-copy h2 {
-  margin-bottom: 8px;
-  font-size: clamp(25px, 2.2vw, 32px);
-  line-height: 1.14;
+  margin-bottom: 10px;
+  font-size: clamp(34px, 3.1vw, 46px);
+  line-height: 1.08;
 }
 
 body.home-en .company-presence-copy > p {
   margin-bottom: 0;
-  font-size: 14px;
-  line-height: 1.45;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 body.home-en .company-address-block {
@@ -963,8 +963,8 @@ body.home-en .company-address-block {
 
 body.home-en .company-address-block address {
   margin-top: 3px;
-  font-size: 14px;
-  line-height: 1.32;
+  font-size: 15px;
+  line-height: 1.38;
 }
 
 body.home-en .company-capability-list {
@@ -985,8 +985,8 @@ body.home-en .company-capability-list div {
 }
 
 body.home-en .company-capability-list strong {
-  font-size: 12px;
-  line-height: 1.22;
+  font-size: 13px;
+  line-height: 1.26;
 }
 
 body.home-en .company-image-frame {
@@ -1188,11 +1188,56 @@ body[dir="rtl"] .company-address-block {
   gap: 18px;
 }
 
+body.home-en .company-news-carousel {
+  overflow: hidden;
+  padding: 4px;
+}
+
+body.home-en .company-news-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  animation: companyNewsFlow 5.6s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+body.home-en .company-news-carousel:hover .company-news-track,
+body.home-en .company-news-carousel:focus-within .company-news-track {
+  animation-play-state: paused;
+}
+
 .news-card {
   display: grid;
   min-width: 0;
   border: 1px solid var(--line);
   background: var(--white);
+}
+
+body.home-en .company-news-card {
+  min-height: 236px;
+  border: 2px solid rgba(15, 107, 87, 0.28);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(244, 248, 246, 0.92), rgba(255, 255, 255, 0.98));
+  box-shadow: 0 12px 26px rgba(16, 32, 38, 0.09);
+}
+
+body.home-en .company-news-card .news-card-link {
+  align-content: center;
+  padding: 24px;
+}
+
+body.home-en .company-news-card h3 {
+  font-size: clamp(20px, 1.7vw, 24px);
+}
+
+@keyframes companyNewsFlow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-34px);
+  }
 }
 
 .news-card-link {
@@ -1630,6 +1675,10 @@ body[dir="rtl"] .floating-whatsapp {
   .hero-slide {
     transition: none;
   }
+
+  body.home-en .company-news-track {
+    animation: none;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -2028,7 +2077,7 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   body.home-en .company-presence-copy h2 {
-    font-size: clamp(24px, 7vw, 30px);
+    font-size: clamp(30px, 8vw, 38px);
   }
 
   body.home-en .company-presence-copy > p {
@@ -2038,6 +2087,11 @@ body[dir="rtl"] .floating-whatsapp {
   body.home-en .company-capability-list div {
     flex-basis: 100%;
     padding: 9px 10px;
+  }
+
+  body.home-en .company-news-track {
+    grid-template-columns: 1fr;
+    animation: none;
   }
 
   .company-presence-section {
