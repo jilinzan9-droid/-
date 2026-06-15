@@ -928,13 +928,16 @@ body.home-en .product-more-btn {
 
 body.home-en .company-presence-section {
   grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: 24px;
-  padding-top: 34px;
-  padding-bottom: 34px;
+  align-items: center;
+  gap: 22px;
+  padding-top: 26px;
+  padding-bottom: 26px;
 }
 
 body.home-en .company-presence-copy {
-  max-width: 700px;
+  justify-self: center;
+  max-width: 720px;
+  text-align: center;
 }
 
 body.home-en .company-presence-copy h2 {
@@ -950,8 +953,12 @@ body.home-en .company-presence-copy > p {
 }
 
 body.home-en .company-address-block {
-  margin: 10px 0;
-  padding: 10px 12px;
+  max-width: 640px;
+  margin: 10px auto;
+  padding: 9px 12px 10px;
+  border-top: 3px solid var(--gold);
+  border-left: 0;
+  text-align: center;
 }
 
 body.home-en .company-address-block address {
@@ -964,13 +971,17 @@ body.home-en .company-capability-list {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
+  justify-content: center;
 }
 
 body.home-en .company-capability-list div {
-  flex: 1 1 180px;
+  flex: 1 1 190px;
   gap: 8px;
   align-items: center;
+  justify-content: center;
+  min-height: 40px;
   padding: 7px 9px;
+  text-align: center;
 }
 
 body.home-en .company-capability-list strong {
@@ -979,6 +990,8 @@ body.home-en .company-capability-list strong {
 }
 
 body.home-en .company-image-frame {
+  justify-self: center;
+  width: 100%;
   min-height: 0;
   aspect-ratio: 16 / 9;
   padding: 0;
@@ -2009,9 +2022,9 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   body.home-en .company-presence-section {
-    gap: 20px;
-    padding-top: 38px;
-    padding-bottom: 38px;
+    gap: 18px;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 
   body.home-en .company-presence-copy h2 {
@@ -2023,6 +2036,7 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   body.home-en .company-capability-list div {
+    flex-basis: 100%;
     padding: 9px 10px;
   }
 
