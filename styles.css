@@ -2285,3 +2285,224 @@ body[dir="rtl"] .floating-whatsapp {
     flex-direction: column;
   }
 }
+
+@media (max-width: 720px) {
+  html[lang="ar"] .topbar,
+  html[lang="ru"] .topbar {
+    padding: 8px 14px;
+    gap: 6px 10px;
+    line-height: 1.35;
+  }
+
+  html[lang="ar"] .nav,
+  html[lang="ru"] .nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    padding: 10px 14px;
+  }
+
+  html[lang="ar"] .brand,
+  html[lang="ru"] .brand {
+    min-width: 0;
+  }
+
+  html[lang="ar"] .brand strong,
+  html[lang="ru"] .brand strong {
+    font-size: 13px;
+  }
+
+  html[lang="ar"] .menu-toggle,
+  html[lang="ru"] .menu-toggle {
+    min-height: 38px;
+    padding: 8px 12px;
+  }
+
+  html[lang="ar"] .nav-actions,
+  html[lang="ru"] .nav-actions {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  html[lang="ar"] .language-button,
+  html[lang="ar"] .nav-quick-link,
+  html[lang="ru"] .language-button,
+  html[lang="ru"] .nav-quick-link {
+    min-height: 38px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  html[lang="ar"] .nav-links,
+  html[lang="ru"] .nav-links {
+    max-height: calc(100vh - 150px);
+    padding: 12px 14px 16px;
+  }
+
+  html[lang="ar"] .nav-links,
+  html[lang="ar"] .dropdown-panel {
+    text-align: right;
+  }
+
+  html[lang="ru"] .nav-links,
+  html[lang="ru"] .dropdown-panel {
+    text-align: left;
+  }
+
+  html[lang="ar"] .hero.hero-carousel,
+  html[lang="ru"] .hero.hero-carousel {
+    height: 540px;
+    min-height: 540px;
+  }
+
+  html[lang="ar"] .hero-carousel .hero-slide,
+  html[lang="ru"] .hero-carousel .hero-slide {
+    min-height: 540px;
+  }
+
+  html[lang="ar"] .hero-carousel .hero-copy,
+  html[lang="ru"] .hero-carousel .hero-copy {
+    padding: 50px 18px 76px;
+  }
+
+  html[lang="ar"] .hero h1,
+  html[lang="ar"] .hero h2,
+  html[lang="ru"] .hero h1,
+  html[lang="ru"] .hero h2 {
+    font-size: clamp(29px, 8.2vw, 38px);
+    line-height: 1.12;
+  }
+
+  html[lang="ar"] .hero-text,
+  html[lang="ru"] .hero-text {
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  html[lang="ar"] .hero-actions,
+  html[lang="ru"] .hero-actions {
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  html[lang="ar"] .btn,
+  html[lang="ru"] .btn {
+    min-height: 42px;
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+
+  html[lang="ar"] .section,
+  html[lang="ru"] .section {
+    padding: 38px 16px;
+  }
+
+  html[lang="ar"] .section h2,
+  html[lang="ru"] .section h2 {
+    font-size: clamp(27px, 8vw, 34px);
+  }
+
+  html[lang="ar"] .section-heading p:not(.eyebrow),
+  html[lang="ar"] .split p,
+  html[lang="ru"] .section-heading p:not(.eyebrow),
+  html[lang="ru"] .split p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  html[lang="ar"] .product-entry-section .product-grid,
+  html[lang="ru"] .product-entry-section .product-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  html[lang="ar"] .product-entry-section .product-card-media,
+  html[lang="ru"] .product-entry-section .product-card-media {
+    aspect-ratio: 16 / 10;
+  }
+
+  html[lang="ar"] .product-entry-section .product-card h3,
+  html[lang="ru"] .product-entry-section .product-card h3 {
+    min-height: 44px;
+    font-size: 15px;
+  }
+
+  html[lang="ar"] .product-entry-section .mini-btn,
+  html[lang="ru"] .product-entry-section .mini-btn {
+    min-height: 32px;
+    font-size: 10px;
+  }
+
+  html[lang="ar"] .company-presence-section,
+  html[lang="ru"] .company-presence-section {
+    gap: 18px;
+  }
+
+  html[lang="ar"] .company-image-frame,
+  html[lang="ru"] .company-image-frame {
+    min-height: 190px;
+  }
+
+  html[lang="ar"] .parts-grid,
+  html[lang="ru"] .parts-grid {
+    gap: 10px;
+  }
+
+  html[lang="ar"] .parts-grid > *,
+  html[lang="ru"] .parts-grid > * {
+    min-height: 50px;
+    padding: 12px;
+  }
+
+  html[lang="ar"] .news-tab,
+  html[lang="ru"] .news-tab {
+    min-height: 38px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  html[lang="ar"] .news-card-link,
+  html[lang="ru"] .news-card-link {
+    padding: 12px;
+  }
+
+  html[lang="ar"] .contact-section,
+  html[lang="ru"] .contact-section {
+    color: var(--white);
+    background: var(--green-dark);
+  }
+
+  html[lang="ar"] .contact-section h2,
+  html[lang="ru"] .contact-section h2 {
+    color: var(--white);
+  }
+
+  html[lang="ar"] .contact-section p:not(.eyebrow),
+  html[lang="ru"] .contact-section p:not(.eyebrow) {
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  html[lang="ar"] .contact-grid a,
+  html[lang="ar"] .contact-grid div,
+  html[lang="ar"] .contact-section address,
+  html[lang="ru"] .contact-grid a,
+  html[lang="ru"] .contact-grid div,
+  html[lang="ru"] .contact-section address {
+    border-color: rgba(255, 255, 255, 0.18);
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  html[lang="ar"] .contact-grid span,
+  html[lang="ru"] .contact-grid span {
+    color: var(--gold);
+  }
+
+  html[lang="ar"] .footer,
+  html[lang="ru"] .footer {
+    gap: 18px;
+    padding: 28px 16px 34px;
+  }
+}
