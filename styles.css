@@ -310,24 +310,23 @@ body[dir="rtl"] .language-panel {
   visibility: visible;
 }
 
-.hero-slide-bg,
 .hero-slide-image {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-}
-
-.hero-slide-bg {
   object-fit: cover;
   object-position: center;
-  filter: blur(6px) brightness(0.76) saturate(0.95);
-  opacity: 0.62;
+  transform: none;
 }
 
-.hero-slide-image {
-  object-fit: contain;
-  object-position: center;
+.hero-slide:nth-child(1) .hero-slide-image {
+  object-position: 58% center;
+}
+
+.hero-slide:nth-child(2) .hero-slide-image,
+.hero-slide:nth-child(3) .hero-slide-image {
+  object-position: center 42%;
 }
 
 .hero-image-placeholder {
@@ -348,20 +347,20 @@ body[dir="rtl"] .language-panel {
   z-index: 1;
   background: linear-gradient(
     90deg,
-    rgba(0, 45, 37, 0.82) 0%,
-    rgba(0, 45, 37, 0.54) 34%,
-    rgba(0, 45, 37, 0.16) 62%,
-    rgba(0, 45, 37, 0.03) 100%
+    rgba(0, 45, 37, 0.88) 0%,
+    rgba(0, 45, 37, 0.64) 34%,
+    rgba(0, 45, 37, 0.24) 62%,
+    rgba(0, 45, 37, 0.04) 100%
   );
 }
 
 body[dir="rtl"] .hero-shade {
   background: linear-gradient(
     270deg,
-    rgba(0, 45, 37, 0.82) 0%,
-    rgba(0, 45, 37, 0.54) 34%,
-    rgba(0, 45, 37, 0.16) 62%,
-    rgba(0, 45, 37, 0.03) 100%
+    rgba(0, 45, 37, 0.88) 0%,
+    rgba(0, 45, 37, 0.64) 34%,
+    rgba(0, 45, 37, 0.24) 62%,
+    rgba(0, 45, 37, 0.04) 100%
   );
 }
 
