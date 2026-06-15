@@ -1466,6 +1466,20 @@ body.home-en .company-news-card h3 {
   align-items: start;
 }
 
+body.home-en .contact-section {
+  color: var(--white);
+  background: var(--green-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+body.home-en .contact-section h2 {
+  color: var(--white);
+}
+
+body.home-en .contact-section p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1481,10 +1495,22 @@ address {
   font-style: normal;
 }
 
+body.home-en .contact-grid a,
+body.home-en .contact-grid div,
+body.home-en .contact-section address {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .contact-grid span {
   display: block;
   color: var(--green);
   font-weight: 900;
+}
+
+body.home-en .contact-grid span {
+  color: var(--gold);
 }
 
 .contact-grid strong {
@@ -1500,7 +1526,7 @@ address {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  padding: 34px clamp(18px, 5vw, 72px);
+  padding: 28px clamp(18px, 5vw, 72px) 34px;
   color: var(--white);
   background: var(--green-dark);
 }
@@ -1529,6 +1555,21 @@ address {
   display: flex;
   gap: 18px;
   font-weight: 800;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  font-weight: 900;
+}
+
+.footer-social span {
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .page-hero {
