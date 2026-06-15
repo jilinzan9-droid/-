@@ -926,6 +926,76 @@ body.home-en .product-more-btn {
   font-weight: 800;
 }
 
+body.home-en .company-presence-section {
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 24px;
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+
+body.home-en .company-presence-copy {
+  max-width: 700px;
+}
+
+body.home-en .company-presence-copy h2 {
+  margin-bottom: 8px;
+  font-size: clamp(25px, 2.2vw, 32px);
+  line-height: 1.14;
+}
+
+body.home-en .company-presence-copy > p {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body.home-en .company-address-block {
+  margin: 10px 0;
+  padding: 10px 12px;
+}
+
+body.home-en .company-address-block address {
+  margin-top: 3px;
+  font-size: 14px;
+  line-height: 1.32;
+}
+
+body.home-en .company-capability-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+body.home-en .company-capability-list div {
+  flex: 1 1 180px;
+  gap: 8px;
+  align-items: center;
+  padding: 7px 9px;
+}
+
+body.home-en .company-capability-list strong {
+  font-size: 12px;
+  line-height: 1.22;
+}
+
+body.home-en .company-image-frame {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(16, 32, 38, 0.12);
+  border-radius: 10px;
+  background: var(--panel);
+  box-shadow: 0 10px 26px rgba(16, 32, 38, 0.12);
+}
+
+body.home-en .company-entrance-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .split {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
@@ -1936,6 +2006,24 @@ body[dir="rtl"] .floating-whatsapp {
     min-width: 220px;
     min-height: 44px;
     font-size: 14px;
+  }
+
+  body.home-en .company-presence-section {
+    gap: 20px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  body.home-en .company-presence-copy h2 {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+
+  body.home-en .company-presence-copy > p {
+    font-size: 14px;
+  }
+
+  body.home-en .company-capability-list div {
+    padding: 9px 10px;
   }
 
   .company-presence-section {
