@@ -713,18 +713,20 @@ body[dir="rtl"] .carousel-arrow-next {
 
 .product-entry-section {
   padding-top: 54px;
+  padding-right: clamp(16px, 3vw, 42px);
   padding-bottom: 54px;
+  padding-left: clamp(16px, 3vw, 42px);
 }
 
 .product-entry-section > * {
-  max-width: 1220px;
+  max-width: 1320px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .product-entry-section .section-heading {
   max-width: 760px;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .product-entry-section h2 {
@@ -742,6 +744,7 @@ body[dir="rtl"] .carousel-arrow-next {
 }
 
 .product-entry-section .product-card {
+  grid-template-rows: minmax(0, 1fr) auto;
   gap: 10px;
   padding: 15px;
 }
@@ -753,11 +756,12 @@ body[dir="rtl"] .carousel-arrow-next {
 .product-entry-section .product-card-media {
   display: grid;
   place-items: center;
-  height: 160px;
+  height: 150px;
   padding: 8px;
+  border: 1px dashed rgba(0, 70, 58, 0.25);
   background:
     linear-gradient(135deg, rgba(15, 107, 87, 0.08), rgba(200, 155, 60, 0.08)),
-    var(--panel);
+    #f4f8f6;
 }
 
 .product-entry-section .product-card-media img {
@@ -783,6 +787,7 @@ body[dir="rtl"] .carousel-arrow-next {
 }
 
 .product-entry-section .card-actions {
+  align-self: end;
   gap: 6px;
 }
 
@@ -1612,7 +1617,7 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .product-entry-section .product-card-media {
-    height: 158px;
+    height: 155px;
   }
 
   .news-grid {
