@@ -1261,6 +1261,11 @@ body[dir="rtl"] .company-address-block {
   display: none;
 }
 
+body.home-en .news-events-section .news-tab-panel {
+  overflow: hidden;
+  padding: 4px;
+}
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1268,10 +1273,11 @@ body[dir="rtl"] .company-address-block {
 }
 
 body.home-en .company-news-carousel {
-  overflow: hidden;
-  padding: 4px;
+  overflow: visible;
+  padding: 0;
 }
 
+body.home-en .news-events-section .news-grid,
 body.home-en .company-news-track {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1280,6 +1286,8 @@ body.home-en .company-news-track {
   will-change: transform;
 }
 
+body.home-en .news-events-section .news-tab-panel:hover .news-grid,
+body.home-en .news-events-section .news-tab-panel:focus-within .news-grid,
 body.home-en .company-news-carousel:hover .company-news-track,
 body.home-en .company-news-carousel:focus-within .company-news-track {
   animation-play-state: paused;
@@ -1293,21 +1301,20 @@ body.home-en .company-news-carousel:focus-within .company-news-track {
 }
 
 body.home-en .company-news-card {
-  min-height: 236px;
-  border: 2px solid rgba(15, 107, 87, 0.28);
-  border-radius: 10px;
-  background:
-    linear-gradient(180deg, rgba(244, 248, 246, 0.92), rgba(255, 255, 255, 0.98));
-  box-shadow: 0 12px 26px rgba(16, 32, 38, 0.09);
+  min-height: 0;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--white);
+  box-shadow: none;
 }
 
 body.home-en .company-news-card .news-card-link {
-  align-content: center;
-  padding: 24px;
+  align-content: start;
+  padding: 14px;
 }
 
 body.home-en .company-news-card h3 {
-  font-size: clamp(20px, 1.7vw, 24px);
+  font-size: clamp(18px, 1.45vw, 21px);
 }
 
 @keyframes companyNewsFlow {
@@ -1758,6 +1765,10 @@ body[dir="rtl"] .floating-whatsapp {
   body.home-en .company-news-track {
     animation: none;
   }
+
+  body.home-en .news-events-section .news-grid {
+    animation: none;
+  }
 }
 
 @media (max-width: 1120px) {
@@ -2173,6 +2184,11 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   body.home-en .company-news-track {
+    grid-template-columns: 1fr;
+    animation: none;
+  }
+
+  body.home-en .news-events-section .news-grid {
     grid-template-columns: 1fr;
     animation: none;
   }
