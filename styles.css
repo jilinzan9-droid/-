@@ -157,7 +157,7 @@ a {
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  z-index: 20;
+  z-index: 200;
   display: grid;
   min-width: 310px;
   padding: 10px;
@@ -165,6 +165,7 @@ a {
   background: var(--white);
   box-shadow: var(--shadow);
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
   transform: translateY(6px);
   transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
@@ -198,6 +199,7 @@ body[dir="rtl"] .dropdown-panel {
 .nav-dropdown:focus-within .dropdown-panel,
 .nav-dropdown.open .dropdown-panel {
   opacity: 1;
+  pointer-events: auto;
   visibility: visible;
   transform: translateY(0);
 }
@@ -238,6 +240,7 @@ body[dir="rtl"] .dropdown-panel {
   right: 0;
   left: auto;
   min-width: 168px;
+  z-index: 260;
 }
 
 body[dir="rtl"] .language-panel {
@@ -254,6 +257,7 @@ body[dir="rtl"] .language-panel {
 .language-dropdown:focus-within .dropdown-panel,
 .language-dropdown.open .dropdown-panel {
   opacity: 1;
+  pointer-events: auto;
   visibility: visible;
   transform: translateY(0);
 }
@@ -1981,6 +1985,12 @@ body[dir="rtl"] .floating-whatsapp {
     transform: none;
   }
 
+  .language-panel {
+    min-width: 168px;
+    width: max-content;
+    max-width: calc(100vw - 28px);
+  }
+
   .nav-dropdown:hover .dropdown-panel,
   .nav-dropdown:focus-within .dropdown-panel,
   .language-dropdown:hover .dropdown-panel,
@@ -2057,6 +2067,12 @@ body[dir="rtl"] .floating-whatsapp {
     opacity: 1;
     visibility: visible;
     transform: none;
+  }
+
+  .language-panel {
+    min-width: 168px;
+    width: max-content;
+    max-width: calc(100vw - 28px);
   }
 
   .nav-dropdown:hover .dropdown-panel,
