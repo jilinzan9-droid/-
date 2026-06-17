@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://jilinzan9-droid.github.io/-/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -134,37 +134,55 @@
   </url>
   <url>
     <loc>https://jilinzan9-droid.github.io/-/en/news/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jilinzan9-droid.github.io/-/en/news/company-news/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jilinzan9-droid.github.io/-/en/news/drilling-mud-pump-supply-spare-parts/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jilinzan9-droid.github.io/-/en/news/oilfield-equipment-spare-parts-sourcing-support/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://jilinzan9-droid.github.io/-/en/news/f1600-mud-pump-spare-parts-selection-support/</loc>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jilinzan9-droid.github.io/-/en/news/industry-news/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jilinzan9-droid.github.io/-/en/news/f-series-mud-pump-spare-parts-selection/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jilinzan9-droid.github.io/-/en/news/mud-pump-liners-pistons-valves-seats-maintenance/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://jilinzan9-droid.github.io/-/en/news/drawworks-brake-system-parts-middle-east/</loc>
-    <lastmod>2026-06-15</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -787,4 +805,21 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/bomco-f-series-mud-pumps/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/bomco-f-series-mud-pumps/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/spm-tws-drilling-mud-pump/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/spm-tws-drilling-mud-pump/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/drawworks-brake-band-system-parts/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/drawworks-brake-band-system-parts/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/drilling-rigs-and-drawworks-accessories/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/drilling-rigs-and-drawworks-accessories/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/hydraulic-disc-brake-system/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/hydraulic-disc-brake-system/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/wcb-eaton-auxiliary-brake/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/wcb-eaton-auxiliary-brake/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/wellhead-tools/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/wellhead-tools/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/en/products/drilling-rig-accessories-valves-pumps/</loc></url>
+  <url><loc>https://jilinzan9-droid.github.io/-/ar/products/drilling-rig-accessories-valves-pumps/</loc></url>
 </urlset>
