@@ -3830,3 +3830,193 @@ body.home-en .fast-wearing-entry span {
 .not-found-hero {
   min-height: 420px;
 }
+
+/* Final deployment QA: keep homepage core categories as compact B2B inquiry cards. */
+body.home-en .product-entry-section > * {
+  max-width: 1240px;
+}
+
+body.home-en .product-entry-section .section-heading {
+  margin-bottom: 28px;
+}
+
+body.home-en .product-entry-section .product-grid.core-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1240px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.home-en .product-entry-section .product-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 70, 58, 0.14);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: rgba(0, 45, 37, 0.14) 0 14px 30px;
+}
+
+body.home-en .product-entry-section .card-detail-link {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  color: inherit;
+  text-decoration: none;
+}
+
+body.home-en .product-entry-section .product-card-media {
+  width: 128px;
+  height: 112px;
+  aspect-ratio: auto;
+  padding: 8px;
+  border: 1px solid rgba(0, 70, 58, 0.14);
+  border-radius: 6px;
+  background: #f4f8f6;
+}
+
+body.home-en .product-entry-section .product-card-media img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+  transition: none;
+}
+
+body.home-en .product-entry-section .product-card:hover .product-card-media img {
+  transform: none;
+}
+
+body.home-en .product-entry-section .product-card h3 {
+  display: -webkit-box;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  color: var(--ink);
+  background: transparent;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.25;
+  text-align: left;
+  text-overflow: clip;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+html[lang="ar"] body.home-en .product-entry-section .product-card h3 {
+  text-align: right;
+}
+
+body.home-en .product-entry-section .product-card p {
+  position: static;
+  display: -webkit-box;
+  width: auto;
+  height: auto;
+  margin: 8px 0 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+body.home-en .product-entry-section .card-actions,
+body.home-en:not(.home-ar) .product-entry-section .card-actions {
+  position: static;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: auto 0 0;
+  padding-top: 12px;
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+  transition: none;
+}
+
+body.home-en .product-entry-section .mini-btn {
+  min-height: 34px;
+  padding: 7px 8px;
+  border-color: rgba(0, 70, 58, 0.2);
+  background: #f4f8f6;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+body.home-en .product-entry-section .mini-btn.dark {
+  color: var(--white);
+  background: var(--green);
+}
+
+@media (max-width: 1024px) {
+  body.home-en .product-entry-section .product-grid.core-category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  body.home-en .product-entry-section .product-grid.core-category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.home-en .product-entry-section .card-detail-link {
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  body.home-en .product-entry-section .product-card-media {
+    width: 112px;
+    height: 100px;
+  }
+
+  body.home-en .product-entry-section .card-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Final deployment QA: prevent mobile overflow from the featured product grid. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body.home-en .featured-products-section .product-grid {
+  width: 100%;
+  max-width: 1240px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body.home-en .featured-products-section .product-card,
+body.home-en .featured-products-section .card-detail-link,
+body.home-en .featured-products-section .product-card-body,
+body.home-en .featured-products-section .card-actions {
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  body.home-en .featured-products-section .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  body.home-en .featured-products-section .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
