@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Sync the Russian product catalog into English and Arabic product catalogs.
 
 Input:
@@ -27,7 +27,7 @@ from urllib.parse import quote
 
 ROOT = Path.cwd()
 RU_PRODUCTS = ROOT / "ru" / "products"
-SITE = "https://jilinzan9-droid.github.io/-/"
+SITE = "https://www.pratt-oil.com/"
 DATE = "2026-06-16"
 WHATSAPP_PHONE = "8615908080040"
 
@@ -507,8 +507,7 @@ def head(lang: str, title: str, description: str, canonical: str, image: str, de
     <link rel="canonical" href="{e(canonical)}">
     <link rel="alternate" hreflang="en" href="{e(canonical.replace('/ar/', '/en/') if '/ar/' in canonical else canonical)}">
     <link rel="alternate" hreflang="ar" href="{e(canonical.replace('/en/', '/ar/') if '/en/' in canonical else canonical)}">
-    <link rel="alternate" hreflang="ru" href="{e(canonical.replace('/en/', '/ru/').replace('/ar/', '/ru/'))}">
-    <link rel="alternate" hreflang="x-default" href="{e(canonical.replace('/ar/', '/en/'))}">
+<link rel="alternate" hreflang="x-default" href="{e(canonical.replace('/ar/', '/en/'))}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{e(title)}">
     <meta property="og:description" content="{e(description)}">

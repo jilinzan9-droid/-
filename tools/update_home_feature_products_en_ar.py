@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import html
 import json
@@ -11,7 +11,7 @@ from PIL import Image, ImageOps
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = "https://jilinzan9-droid.github.io/-"
+SITE = "https://www.pratt-oil.com/"
 WHATSAPP = (
     "https://api.whatsapp.com/send?phone=8615908080040&text="
     "Hello%20Pratt%20Oil%2C%20I%20need%20quotation%20for%20oilfield%20spare%20parts"
@@ -339,8 +339,7 @@ def header(lang: str, slug: str, title: str, desc: str, image: str) -> str:
     <link rel="canonical" href="{canonical}">
     <link rel="alternate" hreflang="en" href="{en_link}">
     <link rel="alternate" hreflang="ar" href="{ar_link}">
-    <link rel="alternate" hreflang="ru" href="{ru_link}">
-    <link rel="alternate" hreflang="x-default" href="{en_link}">
+<link rel="alternate" hreflang="x-default" href="{en_link}">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{escape(title)} | Pratt Oil">
     <meta property="og:description" content="{escape(desc)}">

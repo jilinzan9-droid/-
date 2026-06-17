@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Build the Russian product catalog from the desktop product folder.
 
 The source folder is organized as:
@@ -26,7 +26,7 @@ ROOT = Path.cwd()
 SRC = Path(os.environ["PRODUCT_ROOT"])
 IMG_OUT = ROOT / "assets" / "images" / "ru-products"
 PAGE_OUT = ROOT / "ru" / "products"
-SITE = "https://jilinzan9-droid.github.io/-/"
+SITE = "https://www.pratt-oil.com/"
 DATE = "2026-06-16"
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".gif", ".tif", ".tiff"}
 TABLE_EXTS = {".xlsx", ".xls"}
@@ -395,8 +395,7 @@ def page_head(title: str, description: str, canonical: str, image: str | None, d
     <meta name="description" content="{e(description)}">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="{e(canonical)}">
-    <link rel="alternate" hreflang="ru" href="{e(canonical)}">
-    <link rel="alternate" hreflang="x-default" href="{e(SITE)}ru/products/">
+<link rel="alternate" hreflang="x-default" href="{e(SITE)}ru/products/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="{e(title)}">
     <meta property="og:description" content="{e(description)}">
@@ -713,7 +712,7 @@ def update_ru_home(categories: list[dict]) -> None:
 def update_sitemap(products: list[dict]) -> None:
     sitemap = ROOT / "sitemap.xml"
     text = sitemap.read_text(encoding="utf-8")
-    text = re.sub(r"\s*<url>\s*<loc>https://jilinzan9-droid\.github\.io/-/ru/products/.*?</url>", "", text, flags=re.S)
+    text = re.sub(r"\s*<url>\s*<loc>https://www\.pratt-oil\.com/ru/products/.*?</url>", "", text, flags=re.S)
     urls = [SITE + "ru/products/"] + [SITE + f'ru/products/{product["slug"]}/' for product in products]
     entries = []
     for url in urls:
