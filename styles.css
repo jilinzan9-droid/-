@@ -222,6 +222,38 @@ body[dir="rtl"] .dropdown-panel {
 .language-button {
   min-height: 42px;
   min-width: 104px;
+  border-color: rgba(0, 70, 58, 0.34);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #f2f8f6 100%);
+  box-shadow: 0 8px 22px rgba(0, 70, 58, 0.08);
+  transition: background .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.language-button::after {
+  content: "▾";
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 11px;
+  transform: translateY(-1px);
+  transition: transform .18s ease;
+}
+
+.language-button:hover,
+.language-button:focus-visible,
+.language-dropdown.open .language-button {
+  color: var(--white);
+  border-color: var(--green);
+  background: var(--green);
+  box-shadow: 0 10px 26px rgba(0, 70, 58, 0.18);
+}
+
+.language-dropdown.open .language-button::after {
+  transform: translateY(-1px) rotate(180deg);
+}
+
+body[dir="rtl"] .language-button::after {
+  margin-right: 8px;
+  margin-left: 0;
 }
 
 .nav-quick-link {
@@ -239,7 +271,13 @@ body[dir="rtl"] .dropdown-panel {
 .language-panel {
   right: 0;
   left: auto;
-  min-width: 168px;
+  min-width: 178px;
+  gap: 4px;
+  padding: 8px;
+  border-color: rgba(0, 70, 58, 0.16);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 18px 44px rgba(0, 35, 30, 0.14);
   z-index: 260;
 }
 
@@ -250,7 +288,25 @@ body[dir="rtl"] .language-panel {
 
 .language-option.active {
   color: var(--white);
-  background: var(--green);
+  background: linear-gradient(90deg, var(--green-dark), var(--green));
+}
+
+.language-panel .language-option {
+  border-bottom: 0;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font-weight: 900;
+}
+
+.language-panel .language-option:hover,
+.language-panel .language-option:focus-visible {
+  color: var(--green-dark);
+  background: rgba(0, 70, 58, 0.08);
+}
+
+.language-panel .language-option.active:hover,
+.language-panel .language-option.active:focus-visible {
+  color: var(--white);
 }
 
 .language-dropdown:hover .dropdown-panel,
@@ -2144,7 +2200,7 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .language-panel {
-    min-width: 168px;
+    min-width: 178px;
     width: max-content;
     max-width: calc(100vw - 28px);
   }
@@ -2228,7 +2284,7 @@ body[dir="rtl"] .floating-whatsapp {
   }
 
   .language-panel {
-    min-width: 168px;
+    min-width: 178px;
     width: max-content;
     max-width: calc(100vw - 28px);
   }
