@@ -1005,12 +1005,18 @@ body.home-en .product-more-btn {
   min-width: 264px;
   min-height: 46px;
   padding: 12px 32px;
-  border-color: #126ad7;
+  border-color: #006b57;
   border-radius: 8px;
   color: #fff;
-  background: #126ad7;
+  background: #006b57;
   font-size: 16px;
   font-weight: 800;
+}
+
+body.home-en .product-more-btn:hover,
+body.home-en .product-more-btn:focus-visible {
+  border-color: #004c3f;
+  background: #004c3f;
 }
 
 body.home-en:not(.home-ar) .product-entry-section > *,
@@ -1215,7 +1221,7 @@ body.en-product-catalog-page .featured-products-section .mini-btn.dark {
   min-height: 50px;
   padding: 0 18px;
   color: #fff;
-  background: #126ad7;
+  background: #006b57;
   font-size: 17px;
   font-weight: 800;
   line-height: 50px;
@@ -3150,7 +3156,7 @@ html[lang="ru"]:has(body.ru-product-detail-page) {
   margin: 0 0 16px;
   padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
-  color: #126ad7;
+  color: #006b57;
   font-size: 28px;
   line-height: 1.15;
 }
@@ -3172,7 +3178,7 @@ html[lang="ru"]:has(body.ru-product-detail-page) {
 }
 
 .product-sidebar-parent.active {
-  color: #126ad7;
+  color: #006b57;
   background: #eef3f1;
 }
 
@@ -3194,7 +3200,7 @@ html[lang="ru"]:has(body.ru-product-detail-page) {
 .product-sidebar-links a.active,
 .product-sidebar-links a:hover,
 .product-sidebar-parent:hover {
-  color: #126ad7;
+  color: #006b57;
 }
 
 .product-category-main {
@@ -3279,7 +3285,7 @@ html[lang="en"] .ru-bomco-product-range > .section-heading {
   margin: 0 auto 28px;
   padding: 24px 30px;
   border: 1px solid rgba(16, 32, 38, 0.08);
-  border-left: 4px solid #126ad7;
+  border-left: 4px solid #006b57;
   border-radius: 12px;
   background: var(--white);
   box-shadow: 0 12px 28px rgba(16, 32, 38, 0.06);
@@ -3373,7 +3379,7 @@ html[lang="en"] .ru-bomco-product-range .product-category-main .ru-product-card-
   padding: 0 12px;
   overflow: hidden;
   color: var(--white);
-  background: #126ad7;
+  background: #006b57;
   font-size: 15px;
   font-weight: 900;
   line-height: 46px;
@@ -3525,7 +3531,7 @@ html[lang="en"] .featured-product-range .product-category-main .ru-product-card-
   padding: 0 12px;
   overflow: hidden;
   color: var(--white);
-  background: #126ad7;
+  background: #006b57;
   font-size: 15px;
   font-weight: 900;
   line-height: 46px;
@@ -3701,7 +3707,7 @@ html[lang="en"] .featured-support-grid p {
 
 .ru-model-table th {
   color: var(--white);
-  background: #126ad7;
+  background: #006b57;
   font-weight: 900;
 }
 
