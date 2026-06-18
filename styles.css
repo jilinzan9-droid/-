@@ -354,11 +354,11 @@ body[dir="rtl"] .language-panel {
 
 @media (min-width: 721px) {
   body.home-en:not(.home-ar) .hero-carousel {
-    width: 100%;
-    max-width: 100%;
-    height: clamp(500px, 39.0625vw, 750px);
-    margin-left: 0;
-    margin-right: 0;
+    width: 100vw;
+    max-width: 100vw;
+    height: clamp(520px, 39.0625vw, 800px);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
   }
 }
 
@@ -401,11 +401,11 @@ body[dir="rtl"] .language-panel {
 
 @media (min-width: 721px) {
   body.home-en:not(.home-ar) .hero-slide {
-    background: linear-gradient(120deg, #042f2d 0%, #07524d 45%, #0b5770 100%);
+    background: none;
   }
 
   body.home-en:not(.home-ar) .hero-slide-image {
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
   }
 }
