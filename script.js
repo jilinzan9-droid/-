@@ -200,3 +200,45 @@ document.querySelectorAll("[data-news-tabs]").forEach((section) => {
     });
   });
 });
+
+document.querySelectorAll('a[href*="api.whatsapp.com"], a[href*="wa.me"]').forEach((link) => {
+  link.classList.add("track-whatsapp-click");
+  link.dataset.event = link.dataset.event || "whatsapp_click";
+});
+
+document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+  link.classList.add("track-email-click");
+  link.dataset.event = link.dataset.event || "email_click";
+});
+
+document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+  link.classList.add("track-phone-click");
+  link.dataset.event = link.dataset.event || "phone_click";
+});
+
+document.querySelectorAll('form[action^="mailto:"]').forEach((form) => {
+  form.classList.add("track-email-form");
+  form.dataset.event = form.dataset.event || "email_inquiry_form";
+  form.querySelectorAll('button[type="submit"], input[type="submit"]').forEach((submit) => {
+    submit.classList.add("track-request-quote");
+    submit.dataset.event = submit.dataset.event || "request_quote_submit";
+  });
+});
+
+document.querySelectorAll("a, button").forEach((element) => {
+  const text = (element.textContent || "").trim().toLowerCase();
+  const href = element.getAttribute("href") || "";
+  const looksLikeQuote =
+    text.includes("request quote") ||
+    text.includes("send inquiry") ||
+    text.includes("contact sales") ||
+    text.includes("whatsapp inquiry") ||
+    text.includes("quote") ||
+    href === "#contact" ||
+    href.endsWith("#contact");
+
+  if (looksLikeQuote) {
+    element.classList.add("track-request-quote");
+    element.dataset.event = element.dataset.event || "request_quote_click";
+  }
+});

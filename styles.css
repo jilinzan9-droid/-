@@ -2068,6 +2068,54 @@ body[dir="rtl"] .breadcrumb {
   font: inherit;
 }
 
+.contact-section .inquiry-form {
+  grid-column: 1 / -1;
+}
+
+.inquiry-form .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.inquiry-form .form-full {
+  grid-column: 1 / -1;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+body.home-en .contact-section .quote-form,
+html[lang="ar"] .contact-section .quote-form,
+html[lang="ru"] .contact-section .quote-form {
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+body.home-en .contact-section .quote-form label,
+html[lang="ar"] .contact-section .quote-form label,
+html[lang="ru"] .contact-section .quote-form label,
+body.home-en .contact-section .form-note,
+html[lang="ar"] .contact-section .form-note,
+html[lang="ru"] .contact-section .form-note {
+  color: rgba(255, 255, 255, 0.84);
+}
+
+body.home-en .contact-section .quote-form input,
+body.home-en .contact-section .quote-form textarea,
+html[lang="ar"] .contact-section .quote-form input,
+html[lang="ar"] .contact-section .quote-form textarea,
+html[lang="ru"] .contact-section .quote-form input,
+html[lang="ru"] .contact-section .quote-form textarea {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: var(--ink);
+  background: var(--white);
+}
+
 .faq-list {
   display: grid;
   gap: 10px;
@@ -2458,6 +2506,14 @@ body[dir="rtl"] .floating-whatsapp {
 
   .nav-links.open {
     display: flex;
+  }
+
+  .inquiry-form .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inquiry-form .form-full {
+    grid-column: auto;
   }
 
   .hero {
