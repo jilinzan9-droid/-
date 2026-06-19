@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,6 +26,7 @@ body {
   background: var(--white);
   font-family: Arial, "Helvetica Neue", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body[dir="rtl"] {
@@ -338,12 +340,12 @@ body[dir="rtl"] .language-panel {
 .hero-carousel {
   position: relative;
   display: block;
-  width: 100vw;
-  max-width: 100vw;
+  width: 100%;
+  max-width: 100%;
   height: clamp(500px, 39.0625vw, 750px);
   min-height: 0;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
   overflow: hidden;
   isolation: isolate;
@@ -354,11 +356,11 @@ body[dir="rtl"] .language-panel {
 
 @media (min-width: 721px) {
   body.home-en:not(.home-ar) .hero-carousel {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     height: clamp(520px, 39.0625vw, 800px);
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
