@@ -3113,6 +3113,217 @@ body.brake-band-photo-page .brake-band-hero-copy > p {
   max-width: 820px;
 }
 
+body.brake-band-reference-layout .ru-breadcrumb {
+  max-width: 1180px;
+}
+
+.brake-band-reference-page {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: clamp(34px, 5vw, 72px);
+  max-width: 1180px;
+  padding-top: clamp(28px, 4vw, 54px);
+}
+
+.brake-band-sidebar {
+  position: sticky;
+  top: 92px;
+  align-self: start;
+}
+
+.brake-band-sidebar h2 {
+  margin: 0 0 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(16, 32, 38, 0.16);
+  color: #006b57;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.brake-band-sidebar h2::after {
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin-top: 12px;
+  background: #006b57;
+  content: "";
+}
+
+.brake-band-sidebar a {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  border-bottom: 1px solid rgba(16, 32, 38, 0.12);
+  color: var(--green-dark);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brake-band-sidebar a.active {
+  color: #006b57;
+}
+
+.brake-band-content {
+  min-width: 0;
+}
+
+.brake-band-summary {
+  display: grid;
+  grid-template-columns: minmax(320px, 460px) minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding-bottom: 42px;
+}
+
+.brake-band-main-photo {
+  margin: 0;
+  border: 1px solid rgba(16, 32, 38, 0.16);
+  background: #fff;
+}
+
+.brake-band-main-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.brake-band-summary-copy h1 {
+  margin: 0 0 14px;
+  color: #006b57;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.2;
+}
+
+.brake-band-summary-copy p {
+  max-width: 520px;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.brake-band-contact-lines {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(16, 32, 38, 0.16);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.brake-band-contact-lines a {
+  color: var(--green-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brake-band-block {
+  margin-top: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(16, 32, 38, 0.12);
+}
+
+.brake-band-block h2 {
+  margin: 0 0 28px;
+  border-left: 4px solid #006b57;
+  padding-left: 14px;
+  color: var(--green-dark);
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.15;
+}
+
+.brake-band-block p,
+.brake-band-fitment-list {
+  max-width: 720px;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.brake-band-fitment-list {
+  margin: 18px 0 42px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.brake-band-fitment-list li {
+  margin-bottom: 4px;
+}
+
+.brake-band-drawing,
+.brake-band-shop-photo {
+  max-width: 900px;
+  margin: 36px auto 42px;
+}
+
+.brake-band-drawing img,
+.brake-band-shop-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.brake-band-table-scroll {
+  max-width: 900px;
+  overflow-x: auto;
+}
+
+.brake-band-parts-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 13px;
+  table-layout: fixed;
+}
+
+.brake-band-parts-table th,
+.brake-band-parts-table td {
+  border: 1px solid rgba(16, 32, 38, 0.1);
+  padding: 10px 12px;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+.brake-band-parts-table th {
+  background: #f5f7f7;
+  color: var(--green-dark);
+  font-weight: 900;
+}
+
+.brake-band-parts-table td:nth-child(odd) {
+  font-weight: 800;
+}
+
+.brake-band-contact {
+  max-width: 900px;
+  margin-top: 54px;
+}
+
+html[lang="ar"] .brake-band-block h2 {
+  border-right: 4px solid #006b57;
+  border-left: 0;
+  padding-right: 14px;
+  padding-left: 0;
+}
+
+@media (max-width: 900px) {
+  .brake-band-reference-page {
+    grid-template-columns: 1fr;
+  }
+
+  .brake-band-sidebar {
+    position: static;
+  }
+
+  .brake-band-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
 .ru-category-card strong {
   padding: 15px 16px 4px;
   font-size: 18px;
