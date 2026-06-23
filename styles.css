@@ -3388,6 +3388,110 @@ html[lang="en"] .ru-bomco-product-range .product-category-main .ru-product-card-
   white-space: nowrap;
 }
 
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range {
+  padding-top: 18px;
+  padding-bottom: 52px;
+}
+
+html[lang="en"] body.compact-product-range-page {
+  background: #fff;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .section-heading {
+  display: none;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-layout {
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 56px;
+  max-width: 1200px;
+  align-items: start;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-sidebar {
+  top: 104px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-sidebar h2 {
+  margin-bottom: 10px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9dfe3;
+  color: #126fd6;
+  font-size: 24px;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-sidebar h2::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 3px;
+  margin-top: 12px;
+  background: #126fd6;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-sidebar-parent {
+  min-height: 46px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e4e8eb;
+  background: transparent;
+  color: #4b5961;
+  font-size: 15px;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-sidebar-parent.active,
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-sidebar-parent:hover {
+  color: #126fd6;
+  background: transparent;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px 22px;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card {
+  overflow: hidden;
+  border: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(16, 32, 38, 0.22);
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card > a:first-child {
+  min-height: 0;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card-media {
+  aspect-ratio: 1 / 1;
+  background: #fff;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card-media img {
+  padding: 10px;
+  object-fit: contain;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card-body h3 {
+  min-height: 40px;
+  padding: 0 12px;
+  background: #126fd6;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 40px;
+}
+
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card-body span,
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card-body p,
+html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card .mini-btn {
+  display: none;
+}
+
 html[lang="en"] body.en-featured-product-page {
   background: #f7faf9;
 }
@@ -3974,5 +4078,38 @@ body.home-en:not(.home-ar) .product-more-row {
     padding: 0 12px;
     font-size: 15px;
     line-height: 48px;
+  }
+}
+
+@media (max-width: 1100px) {
+  html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-sidebar {
+    position: static;
+  }
+
+  html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  html[lang="en"] body.compact-product-range-page .ru-bomco-product-range {
+    padding-top: 18px;
+  }
+
+  html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 14px;
+  }
+
+  html[lang="en"] body.compact-product-range-page .ru-bomco-product-range .product-category-main .ru-product-card-body h3 {
+    min-height: 38px;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 38px;
   }
 }
