@@ -3122,6 +3122,8 @@ body.brake-band-reference-layout .ru-breadcrumb {
   grid-template-columns: 220px minmax(0, 1fr);
   gap: clamp(26px, 4vw, 46px);
   max-width: 1180px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: clamp(16px, 2.4vw, 28px);
 }
 
