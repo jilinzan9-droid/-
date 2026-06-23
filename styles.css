@@ -3052,14 +3052,25 @@ html[lang="ru"]:has(body.ru-product-detail-page) {
   background: #f8faf9;
 }
 
+.ru-product-detail-image {
+  padding: clamp(20px, 3vw, 46px);
+}
+
 .ru-category-card-media img,
 .ru-product-card-media img,
-.ru-product-detail-image img,
 .ru-description-grid img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+}
+
+.ru-product-detail-image img {
+  display: block;
+  width: calc(100% - clamp(40px, 6vw, 92px));
+  height: calc(100% - clamp(40px, 6vw, 92px));
+  object-fit: contain;
   object-position: center;
 }
 
