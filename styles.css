@@ -3114,14 +3114,14 @@ body.brake-band-photo-page .brake-band-hero-copy > p {
 }
 
 body.brake-band-reference-layout .ru-breadcrumb {
-  max-width: 1180px;
+  max-width: 1420px;
 }
 
 .brake-band-reference-page {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: clamp(26px, 4vw, 46px);
-  max-width: 1180px;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: clamp(34px, 4.2vw, 62px);
+  max-width: 1420px;
   margin-right: auto;
   margin-left: auto;
   padding-top: clamp(16px, 2.4vw, 28px);
@@ -3172,8 +3172,8 @@ body.brake-band-reference-layout .ru-breadcrumb {
 
 .brake-band-summary {
   display: grid;
-  grid-template-columns: minmax(320px, 460px) minmax(0, 1fr);
-  gap: 24px;
+  grid-template-columns: minmax(520px, 640px) minmax(360px, 1fr);
+  gap: clamp(28px, 3vw, 42px);
   align-items: start;
   padding-bottom: 22px;
 }
@@ -3257,7 +3257,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 
 .brake-band-drawing,
 .brake-band-shop-photo {
-  max-width: 900px;
+  max-width: 1040px;
   margin: 22px auto 26px;
 }
 
@@ -3269,7 +3269,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 }
 
 .brake-band-table-scroll {
-  max-width: 900px;
+  max-width: 1040px;
   overflow-x: auto;
 }
 
@@ -3301,7 +3301,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 }
 
 .brake-band-contact {
-  max-width: 900px;
+  max-width: 1040px;
   margin-top: 30px;
 }
 
