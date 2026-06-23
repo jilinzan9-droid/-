@@ -4873,6 +4873,240 @@ body.wcb-wear-plate-page .wcb-wear-plate-layout .wcb-spec-table {
   margin-top: 18px;
 }
 
+body.wcb-reference-cn-page {
+  background: #fff;
+}
+
+body.wcb-reference-cn-page .topbar {
+  display: none;
+}
+
+body.wcb-reference-cn-page .wcb-cn-page {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 70px;
+  width: min(1280px, calc(100% - 48px));
+  margin: 72px auto 0;
+  align-items: start;
+}
+
+body.wcb-reference-cn-page .wcb-cn-sidebar {
+  position: sticky;
+  top: 112px;
+}
+
+body.wcb-reference-cn-page .wcb-cn-sidebar h2 {
+  margin: 0 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d9dfe7;
+  color: #176bd8;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+body.wcb-reference-cn-page .wcb-cn-sidebar h2::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 4px;
+  margin-top: 10px;
+  background: #176bd8;
+}
+
+body.wcb-reference-cn-page .wcb-cn-sidebar a {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7ebef;
+  color: #3d464c;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+body.wcb-reference-cn-page .wcb-cn-main {
+  max-width: 900px;
+}
+
+body.wcb-reference-cn-page .wcb-cn-hero {
+  display: grid;
+  grid-template-columns: minmax(390px, 460px) minmax(280px, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+body.wcb-reference-cn-page .wcb-cn-hero-image {
+  border: 1px solid #e5e9ee;
+  background: #fff;
+}
+
+body.wcb-reference-cn-page .wcb-cn-hero-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+body.wcb-reference-cn-page .wcb-cn-hero-copy h1 {
+  margin: 0 0 10px;
+  color: #176bd8;
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+body.wcb-reference-cn-page .wcb-cn-hero-copy p {
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dce2e8;
+  color: #606b73;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+body.wcb-reference-cn-page .wcb-cn-contact-line {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 9px 0;
+  color: #5a646b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+body.wcb-reference-cn-page .wcb-cn-contact-line a {
+  color: #176bd8;
+  font-weight: 500;
+}
+
+body.wcb-reference-cn-page .wcb-cn-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 0 18px;
+  border: 1px solid #176bd8;
+  color: #176bd8;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+body.wcb-reference-cn-page .wcb-cn-overview {
+  margin-top: 38px;
+  padding-top: 2px;
+}
+
+body.wcb-reference-cn-page .wcb-cn-overview h2 {
+  margin: 0 0 42px;
+  padding: 0 0 12px 14px;
+  border-bottom: 1px solid #e4e8ed;
+  border-left: 4px solid #176bd8;
+  color: #1c2830;
+  font-size: 23px;
+  line-height: 1.2;
+}
+
+body.wcb-reference-cn-page .wcb-cn-overview p {
+  width: min(780px, 100%);
+  margin: 0 0 4px;
+  color: #323d45;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+body.wcb-reference-cn-page .wcb-cn-table-wrap {
+  margin-top: 32px;
+  overflow-x: auto;
+}
+
+body.wcb-reference-cn-page .wcb-cn-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+  color: #333;
+  background: #fff;
+  font-size: 13px;
+  text-align: center;
+}
+
+body.wcb-reference-cn-page .wcb-cn-table th,
+body.wcb-reference-cn-page .wcb-cn-table td {
+  min-width: 112px;
+  padding: 10px 8px;
+  border: 1px solid #e8e8e8;
+  line-height: 1.45;
+}
+
+body.wcb-reference-cn-page .wcb-cn-table th {
+  background: #fafafa;
+  font-weight: 800;
+}
+
+body.wcb-reference-cn-page .wcb-cn-table tbody tr:nth-child(even) td {
+  background: #fcfcfc;
+}
+
+body.wcb-reference-cn-page .wcb-cn-prevnext {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  margin: 34px 0 18px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e5e9;
+  color: #9a7f6a;
+  font-size: 13px;
+}
+
+body.wcb-reference-cn-page .wcb-cn-prevnext span {
+  color: #d8bfb1;
+  font-size: 21px;
+}
+
+body.wcb-reference-cn-page .wcb-cn-prevnext a:last-child {
+  text-align: right;
+}
+
+body.wcb-reference-cn-page .wcb-cn-form {
+  margin-bottom: 58px;
+  padding: 24px 22px 28px;
+  background: #f3f3f3;
+}
+
+body.wcb-reference-cn-page .wcb-cn-form h2 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+body.wcb-reference-cn-page .wcb-cn-form input,
+body.wcb-reference-cn-page .wcb-cn-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border: 0;
+  background: #fff;
+  color: #56616a;
+  font: inherit;
+}
+
+body.wcb-reference-cn-page .wcb-cn-form textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+@media (max-width: 980px) {
+  body.wcb-reference-cn-page .wcb-cn-page,
+  body.wcb-reference-cn-page .wcb-cn-hero {
+    grid-template-columns: 1fr;
+  }
+
+  body.wcb-reference-cn-page .wcb-cn-sidebar {
+    position: static;
+  }
+}
+
 @media (max-width: 1180px) {
   html[lang="en"] body.en-product-detail-page .ru-bomco-product-range .product-category-layout,
   html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range .product-category-layout {
