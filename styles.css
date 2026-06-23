@@ -3120,9 +3120,9 @@ body.brake-band-reference-layout .ru-breadcrumb {
 .brake-band-reference-page {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
-  gap: clamp(34px, 5vw, 72px);
+  gap: clamp(26px, 4vw, 46px);
   max-width: 1180px;
-  padding-top: clamp(28px, 4vw, 54px);
+  padding-top: clamp(16px, 2.4vw, 28px);
 }
 
 .brake-band-sidebar {
@@ -3171,9 +3171,9 @@ body.brake-band-reference-layout .ru-breadcrumb {
 .brake-band-summary {
   display: grid;
   grid-template-columns: minmax(320px, 460px) minmax(0, 1fr);
-  gap: 28px;
+  gap: 24px;
   align-items: start;
-  padding-bottom: 42px;
+  padding-bottom: 22px;
 }
 
 .brake-band-main-photo {
@@ -3190,7 +3190,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 }
 
 .brake-band-summary-copy h1 {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   color: #006b57;
   font-size: clamp(24px, 3vw, 32px);
   line-height: 1.2;
@@ -3198,7 +3198,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 
 .brake-band-summary-copy p {
   max-width: 520px;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.8;
@@ -3206,9 +3206,9 @@ body.brake-band-reference-layout .ru-breadcrumb {
 
 .brake-band-contact-lines {
   display: grid;
-  gap: 8px;
-  margin: 16px 0 20px;
-  padding-top: 14px;
+  gap: 6px;
+  margin: 12px 0 14px;
+  padding-top: 10px;
   border-top: 1px solid rgba(16, 32, 38, 0.16);
   color: var(--muted);
   font-size: 14px;
@@ -3221,13 +3221,13 @@ body.brake-band-reference-layout .ru-breadcrumb {
 }
 
 .brake-band-block {
-  margin-top: 10px;
-  padding-top: 18px;
+  margin-top: 4px;
+  padding-top: 14px;
   border-top: 1px solid rgba(16, 32, 38, 0.12);
 }
 
 .brake-band-block h2 {
-  margin: 0 0 28px;
+  margin: 0 0 16px;
   border-left: 4px solid #006b57;
   padding-left: 14px;
   color: var(--green-dark);
@@ -3244,7 +3244,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 }
 
 .brake-band-fitment-list {
-  margin: 18px 0 42px;
+  margin: 12px 0 22px;
   padding-left: 0;
   list-style: none;
 }
@@ -3256,7 +3256,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 .brake-band-drawing,
 .brake-band-shop-photo {
   max-width: 900px;
-  margin: 36px auto 42px;
+  margin: 22px auto 26px;
 }
 
 .brake-band-drawing img,
@@ -3300,7 +3300,7 @@ body.brake-band-reference-layout .ru-breadcrumb {
 
 .brake-band-contact {
   max-width: 900px;
-  margin-top: 54px;
+  margin-top: 30px;
 }
 
 html[lang="ar"] .brake-band-block h2 {
