@@ -5015,6 +5015,19 @@ body.wcb-reference-cn-page .wcb-cn-overview p {
   line-height: 1.85;
 }
 
+body.wcb-reference-cn-page .wcb-cn-large-photo {
+  width: min(780px, 100%);
+  margin: 32px 0 28px;
+}
+
+body.wcb-reference-cn-page .wcb-cn-large-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e4e9ee;
+  object-fit: contain;
+}
+
 body.wcb-reference-cn-page .wcb-cn-table-wrap {
   margin-top: 32px;
   overflow-x: auto;
