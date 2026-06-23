@@ -2965,7 +2965,7 @@ body[dir="rtl"] .floating-whatsapp {
   }
 }
 
-/* Russian product catalog */
+/* Reference product catalog */
 .ru-catalog-hero {
   padding: clamp(76px, 9vw, 128px) clamp(18px, 5vw, 80px);
   color: var(--white);
@@ -4090,7 +4090,7 @@ html[lang="en"] .featured-support-grid p {
   }
 }
 
-/* Final English product wall layout: match the Russian homepage product grid. */
+/* Final English product wall layout: match the reference homepage product grid. */
 body.home-en:not(.home-ar) .product-entry-section,
 body.en-product-catalog-page .featured-products-section {
   padding-top: 64px;
