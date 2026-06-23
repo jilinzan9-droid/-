@@ -4769,6 +4769,110 @@ html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range .ru-product-
   border-color: #006b57;
 }
 
+body.wcb-wear-plate-page .wcb-wear-plate-layout {
+  padding-top: 28px;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .product-category-main > .section {
+  max-width: none;
+  padding: 0 0 42px;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-detail-hero {
+  grid-template-columns: minmax(420px, 0.96fr) minmax(360px, 0.74fr);
+  gap: 28px;
+  align-items: start;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-detail-image {
+  order: 1;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-detail-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-detail-copy {
+  order: 2;
+  padding-top: 8px;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-detail-copy h1 {
+  color: var(--green);
+  font-size: clamp(30px, 2.6vw, 42px);
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-detail-copy > p {
+  max-width: 660px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-meta {
+  gap: 10px;
+  margin: 0 0 18px;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-meta span {
+  padding: 0;
+  border-left: 0;
+  background: transparent;
+  color: var(--steel);
+  font-weight: 700;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .hero-actions {
+  justify-content: flex-start;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .btn.primary {
+  background: var(--green);
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-info-grid {
+  display: block;
+  border-top: 1px solid var(--line);
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-info-grid article {
+  padding: 22px 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-info-grid h2,
+body.wcb-wear-plate-page .wcb-wear-plate-layout .section-heading h2 {
+  padding-left: 12px;
+  border-left: 4px solid var(--green);
+  color: var(--ink);
+  font-size: clamp(24px, 2vw, 32px);
+}
+
+html[lang="ar"] body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-info-grid h2,
+html[lang="ar"] body.wcb-wear-plate-page .wcb-wear-plate-layout .section-heading h2 {
+  padding-right: 12px;
+  padding-left: 0;
+  border-right: 4px solid var(--green);
+  border-left: 0;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-model-table-section .section-heading {
+  max-width: 100%;
+}
+
+body.wcb-wear-plate-page .wcb-wear-plate-layout .wcb-spec-table {
+  margin-top: 18px;
+}
+
 @media (max-width: 1180px) {
   html[lang="en"] body.en-product-detail-page .ru-bomco-product-range .product-category-layout,
   html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range .product-category-layout {
@@ -4784,5 +4888,9 @@ html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range .ru-product-
   html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range .product-category-main .ru-product-grid,
   html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range > .ru-product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body.wcb-wear-plate-page .wcb-wear-plate-layout .ru-product-detail-hero {
+    grid-template-columns: 1fr;
   }
 }
