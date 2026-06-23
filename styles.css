@@ -4475,6 +4475,37 @@ html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range .ru-product-
   display: none;
 }
 
+.product-range-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.product-range-pagination a,
+.product-range-pagination span {
+  min-width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 107, 87, 0.28);
+  border-radius: 8px;
+  color: #006b57;
+  background: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 39, 34, 0.08);
+}
+
+.product-range-pagination a:hover,
+.product-range-pagination .active {
+  color: #fff;
+  background: #006b57;
+  border-color: #006b57;
+}
+
 @media (max-width: 1180px) {
   html[lang="en"] body.en-product-detail-page .ru-bomco-product-range .product-category-layout,
   html[lang="ar"] body.ar-product-detail-page .ru-bomco-product-range .product-category-layout {
