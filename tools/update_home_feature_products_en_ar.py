@@ -222,13 +222,13 @@ def home_product_section(lang: str) -> str:
     if lang == "en":
         eyebrow = "Product categories"
         h2 = "Core oilfield spare parts categories"
-        intro = "Featured oilfield equipment products from the Russian product layout, localized for Middle East buyers and linked to dedicated quotation pages."
+        intro = "Featured oilfield equipment products from the reference product layout, localized for Middle East buyers and linked to dedicated quotation pages."
         more = "View Product Page"
         more_href = "en/products/"
     else:
         eyebrow = "فئات المنتجات"
         h2 = "فئات قطع غيار معدات حقول النفط الأساسية"
-        intro = "منتجات معدات حقول النفط المختارة من تخطيط الموقع الروسي، مع صفحات تفاصيل مخصصة للاستفسارات وطلبات الأسعار."
+        intro = "منتجات معدات حقول النفط المختارة من التخطيط المرجعي، مع صفحات تفاصيل مخصصة للاستفسارات وطلبات الأسعار."
         more = "عرض صفحة المنتجات"
         more_href = "products/"
     cards = "\n".join(card_html(p, lang, "home") for p in PRODUCTS)
@@ -264,12 +264,12 @@ def catalog_feature_section(lang: str) -> str:
     if lang == "en":
         eyebrow = "Our products"
         h2 = "Featured Oilfield Equipment Products"
-        intro = "Eight key product entrances aligned with the Russian homepage product layout. Click a card to view the product name, image, application and quotation support."
+        intro = "Eight key product entrances aligned with the reference product layout. Click a card to view the product name, image, application and quotation support."
         id_value = "featured-products"
     else:
         eyebrow = "منتجاتنا"
         h2 = "منتجات معدات حقول النفط المختارة"
-        intro = "ثمانية مداخل رئيسية للمنتجات متوافقة مع تخطيط صفحة المنتجات الروسية. اضغط على البطاقة لعرض الاسم والصورة والاستخدام ودعم التسعير."
+        intro = "ثمانية مداخل رئيسية للمنتجات متوافقة مع تخطيط صفحة المنتجات المرجعية. اضغط على البطاقة لعرض الاسم والصورة والاستخدام ودعم التسعير."
         id_value = "featured-products"
     cards = "\n".join(card_html(p, lang, "catalog") for p in PRODUCTS)
     return f'''<section class="section product-entry-section featured-products-section" id="{id_value}">
@@ -300,7 +300,7 @@ def header(lang: str, slug: str, title: str, desc: str, image: str) -> str:
     stylesheet = "../../../styles.css?v=featured-products-20260616"
     ar_link = f"{SITE}/ar/products/{slug}/"
     en_link = f"{SITE}/en/products/{slug}/"
-    ru_link = f"{SITE}/ru/products/"
+
     org = {
         "@context": "https://schema.org",
         "@graph": [
@@ -367,9 +367,9 @@ def nav(lang: str, slug: str) -> str:
             "news": "News",
             "services": "Services",
             "contact": "Contact",
-            "language": "Language",
+            "language": "English",
         }
-        lang_opts = '<a class="language-option active" href="./">English</a><a class="language-option" href="../../../ar/products/{}/">Arabic</a><a class="language-option" href="../../../ru/products/">Russian</a>'.format(slug)
+        lang_opts = '<a class="language-option active" href="./">English</a><a class="language-option" href="../../../ar/products/{}/">Arabic</a>'.format(slug)
     else:
         labels = {
             "menu": "القائمة",
@@ -379,9 +379,9 @@ def nav(lang: str, slug: str) -> str:
             "news": "الأخبار",
             "services": "الخدمات",
             "contact": "اتصل بنا",
-            "language": "اللغة",
+            "language": "Arabic",
         }
-        lang_opts = '<a class="language-option" href="../../../en/products/{}/">English</a><a class="language-option active" href="./">Arabic</a><a class="language-option" href="../../../ru/products/">Russian</a>'.format(slug)
+        lang_opts = '<a class="language-option" href="../../../en/products/{}/">English</a><a class="language-option active" href="./">Arabic</a>'.format(slug)
     return f'''  <body class="ru-product-detail-page {'ar-product-detail-page' if lang == 'ar' else 'en-product-detail-page'}">
     <header class="site-header">
       <div class="topbar">
@@ -430,7 +430,7 @@ def detail_page(product: dict[str, object], lang: str) -> str:
             ("Product category", category),
             ("Quotation support", "Part number, model, product photo or drawing"),
             ("Supply support", "Specification matching and export packaging"),
-            ("Communication", "English, Arabic and Russian"),
+            ("Communication", "English and Arabic"),
         ]
     else:
         bc_home, bc_products = "الرئيسية", "المنتجات"
@@ -442,7 +442,7 @@ def detail_page(product: dict[str, object], lang: str) -> str:
             ("فئة المنتج", category),
             ("دعم التسعير", "رقم القطعة أو الموديل أو صورة المنتج أو الرسم الفني"),
             ("دعم التوريد", "مطابقة المواصفات وتغليف التصدير"),
-            ("التواصل", "الإنجليزية والعربية والروسية"),
+            ("التواصل", "الإنجليزية والعربية"),
         ]
     items = "".join(f"<li>{escape(str(item))}</li>" for item in common)
     rows = "".join(f"<tr><th>{escape(k)}</th><td>{escape(v)}</td></tr>" for k, v in table)

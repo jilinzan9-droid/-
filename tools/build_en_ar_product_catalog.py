@@ -1,8 +1,8 @@
 ﻿# -*- coding: utf-8 -*-
-"""Sync the Russian product catalog into English and Arabic product catalogs.
+"""Sync the reference product catalog into English and Arabic product catalogs.
 
 Input:
-  ru/products/index.html and ru/products/<slug>/index.html
+  source product catalog pages used for reference matching
 
 Output:
   en/products/index.html
@@ -10,7 +10,7 @@ Output:
   ar/products/index.html
   ar/products/<slug>/index.html
 
-This script intentionally does not write to ru/ or assets/.
+This script intentionally does not write to source assets.
 """
 
 from __future__ import annotations
@@ -392,22 +392,22 @@ def language_panel(lang: str, depth: int, slug: str | None = None, is_index: boo
     if slug:
         en_href = ("../" * depth) + f"en/products/{slug}/"
         ar_href = ("../" * depth) + f"ar/products/{slug}/"
-        ru_href = ("../" * depth) + f"ru/products/{slug}/"
+
         active_href = "./"
     else:
         en_href = ("../" * depth) + "en/products/"
         ar_href = ("../" * depth) + "ar/products/"
-        ru_href = ("../" * depth) + "ru/products/"
+
         active_href = "./"
     if lang == "en":
         en_href = active_href
     elif lang == "ar":
         ar_href = active_href
     panel = {
-        "en": f'<a class="language-option active" href="{en_href}">English</a><a class="language-option" href="{ar_href}">Arabic</a><a class="language-option" href="{ru_href}">Russian</a>',
-        "ar": f'<a class="language-option" href="{en_href}">English</a><a class="language-option active" href="{ar_href}">Arabic</a><a class="language-option" href="{ru_href}">Russian</a>',
+        "en": f'<a class="language-option active" href="{en_href}">English</a><a class="language-option" href="{ar_href}">Arabic</a>',
+        "ar": f'<a class="language-option" href="{en_href}">English</a><a class="language-option active" href="{ar_href}">Arabic</a>',
     }[lang]
-    label = "Language" if lang == "en" else "اللغة"
+    label = "English" if lang == "en" else "Arabic"
     aria = "Open language menu" if lang == "en" else "فتح قائمة اللغة"
     return f'<button class="language-button" type="button" data-nav-toggle aria-label="{aria}" aria-expanded="false">{label}</button><div class="dropdown-panel language-panel" data-nav-panel>{panel}</div>'
 
@@ -541,9 +541,9 @@ def build_catalog(lang: str, categories: list[Category], products: list[Product]
         else "كتالوج منتجات معدات حقول النفط | Pratt Oil"
     )
     desc = (
-        "Product catalog synchronized from the Russian product library, including oilfield spare parts images, product categories, description photos and model tables for quotation support."
+        "Product catalog synchronized from the reference product library, including oilfield spare parts images, product categories, description photos and model tables for quotation support."
         if lang == "en"
-        else "كتالوج منتجات متزامن من مكتبة المنتجات الروسية، يتضمن صور قطع غيار حقول النفط والتصنيفات وصور الوصف وجداول الموديلات لدعم عروض الأسعار."
+        else "كتالوج منتجات متزامن من مكتبة المنتجات المرجعية، يتضمن صور قطع غيار حقول النفط والتصنيفات وصور الوصف وجداول الموديلات لدعم عروض الأسعار."
     )
     canonical = SITE + f"{lang}/products/"
     first_img = next((product.img for product in products if product.img), "../../assets/images/hero/hero-oilfield-equipment-spare-parts-middle-east.webp")
@@ -604,9 +604,9 @@ def build_catalog(lang: str, categories: list[Category], products: list[Product]
             <div class="ru-product-grid">{''.join(cards)}</div>
           </div>""")
         section_intro = (
-            "Oilfield equipment spare parts synchronized from the Russian product library. Send part number, model or product photo for quotation and compatibility support."
+            "Oilfield equipment spare parts synchronized from the reference product library. Send part number, model or product photo for quotation and compatibility support."
             if lang == "en"
-            else "قطع غيار معدات حقول النفط متزامنة من مكتبة المنتجات الروسية. أرسل رقم القطعة أو الموديل أو صورة المنتج للحصول على عرض سعر ودعم المطابقة."
+            else "قطع غيار معدات حقول النفط متزامنة من مكتبة المنتجات المرجعية. أرسل رقم القطعة أو الموديل أو صورة المنتج للحصول على عرض سعر ودعم المطابقة."
         )
         sections.append(f"""<section class="ru-category-section" id="{e(category.id)}">
           <div class="ru-category-heading"><p class="eyebrow">{"Product Category" if lang == "en" else "تصنيف المنتجات"}</p><h2>{e(cat_name(category))}</h2><p>{e(section_intro)}</p></div>
@@ -620,9 +620,9 @@ def build_catalog(lang: str, categories: list[Category], products: list[Product]
         else "كتالوج منتجات ومعدات وقطع غيار حقول النفط"
     )
     hero_text = (
-        "This catalog synchronizes the uploaded Russian product library into the English website. Product images, description photos and model tables are preserved for quotation support."
+        "This catalog synchronizes the uploaded reference product library into the English website. Product images, description photos and model tables are preserved for quotation support."
         if lang == "en"
-        else "يقوم هذا الكتالوج بمزامنة مكتبة المنتجات الروسية المرفوعة إلى الموقع العربي. تم الحفاظ على صور المنتجات وصور الوصف وجداول الموديلات لدعم عروض الأسعار."
+        else "يقوم هذا الكتالوج بمزامنة مكتبة المنتجات المرجعية المرفوعة إلى الموقع العربي. تم الحفاظ على صور المنتجات وصور الوصف وجداول الموديلات لدعم عروض الأسعار."
     )
     view_text = "View Products" if lang == "en" else "عرض المنتجات"
     quote_text = "Request Quote on WhatsApp" if lang == "en" else "طلب عرض عبر واتساب"
@@ -800,7 +800,7 @@ def build_detail(lang: str, categories: list[Category], products: list[Product])
 def main() -> None:
     categories, products = parse_catalog()
     if len(products) != 99:
-        raise RuntimeError(f"Expected 99 Russian products, found {len(products)}")
+        raise RuntimeError(f"Expected 99 reference products, found {len(products)}")
     for lang in ("en", "ar"):
         build_catalog(lang, categories, products)
         build_detail(lang, categories, products)

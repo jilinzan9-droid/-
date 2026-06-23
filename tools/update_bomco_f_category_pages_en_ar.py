@@ -48,7 +48,7 @@ def section(lang: str) -> str:
         eyebrow = "BOMCO F Series"
         heading = "BOMCO F Series Mud Pump Spare Parts"
         intro = (
-            "This product range follows the BOMCO F series category page from the Russian website. "
+            "This product range follows the BOMCO F series reference category page. "
             "Buyers can open each product for image, name, quotation support and specification matching."
         )
         category = "BOMCO F Series Mud Pumps"
@@ -58,7 +58,7 @@ def section(lang: str) -> str:
         eyebrow = "سلسلة BOMCO F"
         heading = "قطع غيار مضخات الطين BOMCO F"
         intro = (
-            "يعتمد هذا النطاق على صفحة فئة BOMCO F في الموقع الروسي. "
+            "يعتمد هذا النطاق على صفحة فئة BOMCO F المرجعية. "
             "يمكن للمشتري فتح كل منتج لعرض الصورة والاسم ودعم عرض السعر ومطابقة المواصفات."
         )
         category = "مضخات الطين BOMCO F"
