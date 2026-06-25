@@ -28,6 +28,7 @@
 
       .contact-page-main .contact-hero-visual {
         width: 100%;
+        height: clamp(500px, 39.0625vw, 750px);
         overflow: hidden;
         border-bottom: 1px solid #d9e2df;
         background: #f4f8f6;
@@ -36,9 +37,15 @@
       .contact-page-main .contact-hero-visual img {
         display: block;
         width: 100%;
-        height: auto;
-        object-fit: contain;
-        object-position: center;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      @media (min-width: 721px) {
+        .contact-page-main .contact-hero-visual {
+          height: clamp(520px, 39.0625vw, 800px);
+        }
       }
 
       .contact-page-main .contact-breadcrumb,
@@ -186,6 +193,14 @@
         line-height: 1.22;
       }
 
+      .contact-page-main .contact-person {
+        margin: -8px 0 0;
+        color: #004333;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 1.25;
+      }
+
       .contact-page-main .contact-channel-card p:not(.eyebrow) {
         margin: 0;
         color: #52636b;
@@ -309,6 +324,10 @@
       }
 
       @media (max-width: 640px) {
+        .contact-page-main .contact-hero-visual {
+          height: clamp(260px, 65vw, 420px);
+        }
+
         .contact-page-main .contact-breadcrumb,
         .contact-page-main .contact-intro-panel,
         .contact-page-main .contact-channel-section,
@@ -380,7 +399,7 @@
     </header>
     <main class="contact-page-main">
       <section class="contact-hero-visual">
-        <img src="/assets/images/hero/homepage-hero-land-drilling-rig-banner.webp" alt="Land drilling rig oilfield equipment" width="1920" height="760" loading="eager" decoding="async">
+        <img src="/assets/images/hero/homepage-hero-land-drilling-rig-banner.webp" alt="Land drilling rig oilfield equipment" width="1920" height="750" loading="eager" decoding="async">
       </section>
       <nav class="ru-breadcrumb contact-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><strong>Contact Information</strong></nav>
       <section class="contact-intro-panel">
@@ -393,6 +412,7 @@
           <article class="contact-channel-card">
             <p class="eyebrow">Primary Sales</p>
             <h2>Oilfield Spare Parts Quotation</h2>
+            <p class="contact-person">Jason Wang</p>
             <p>Best for urgent price checks, part number confirmation and fast compatibility support.</p>
             <div class="contact-channel-meta">
               <a href="mailto:1999@pratt-oil.com" data-event="email_click"><span>Email</span><strong>1999@pratt-oil.com</strong></a>
@@ -411,6 +431,7 @@
           <article class="contact-channel-card">
             <p class="eyebrow">Export Support</p>
             <h2>International Order Coordination</h2>
+            <p class="contact-person">Tom Zan</p>
             <p>Use this contact for shipping details, destination checks and export document coordination.</p>
             <div class="contact-channel-meta">
               <a href="mailto:2000@pratt-oil.com" data-event="email_click"><span>Email</span><strong>2000@pratt-oil.com</strong></a>
@@ -429,6 +450,7 @@
           <article class="contact-channel-card">
             <p class="eyebrow">Technical Support</p>
             <h2>Model and Drawing Confirmation</h2>
+            <p class="contact-person">Jiesen Wu</p>
             <p>Send equipment model, nameplate photo, drawing or sample photos for technical matching.</p>
             <div class="contact-channel-meta">
               <a href="mailto:2001@jnax369.com" data-event="email_click"><span>Email</span><strong>2001@jnax369.com</strong></a>
