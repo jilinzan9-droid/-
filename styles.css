@@ -3240,6 +3240,19 @@ html[lang="ru"]:has(body.ru-product-detail-page) {
   background: #eef3f1;
 }
 
+.product-sidebar-group {
+  margin: 0;
+}
+
+.product-sidebar-group summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.product-sidebar-group summary::-webkit-details-marker {
+  display: none;
+}
+
 .product-sidebar-links {
   display: grid;
   padding: 8px 0 18px;
@@ -3263,6 +3276,30 @@ html[lang="ru"]:has(body.ru-product-detail-page) {
 
 .product-category-main {
   min-width: 0;
+}
+
+.product-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.product-pagination a,
+.product-pagination span {
+  min-width: 42px;
+  padding: 11px 15px;
+  border: 1px solid rgba(0, 107, 87, 0.25);
+  color: #006b57;
+  font-weight: 800;
+  text-align: center;
+}
+
+.product-pagination .active,
+.product-pagination a:hover {
+  color: var(--white);
+  background: #006b57;
 }
 
 .ru-product-card {
@@ -3444,6 +3481,31 @@ html[lang="en"] .ru-bomco-product-range .product-category-main .ru-product-card-
   text-align: center;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+#hhf-products .product-category-main .ru-product-grid {
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+#hhf-products .product-category-main .ru-product-card-media {
+  aspect-ratio: 1 / 1;
+  min-height: 310px;
+}
+
+#hhf-products .product-category-main .ru-product-card-media img {
+  padding: 14px;
+  object-fit: contain;
+}
+
+#hhf-products .product-category-main .ru-product-card-body h3 {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  line-height: 1.25;
+  white-space: normal;
 }
 
 html[lang="en"] #wcb-eaton-auxiliary-brake-products .product-category-layout {
@@ -4088,5 +4150,202 @@ body.home-en:not(.home-ar) .product-more-row {
     padding: 0 12px;
     font-size: 15px;
     line-height: 48px;
+  }
+}
+
+
+.contact-page-main {
+  background: #fff;
+}
+
+.contact-hero-visual {
+  width: 100%;
+  height: clamp(260px, 36vw, 430px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-hero-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.contact-breadcrumb,
+.contact-intro-panel,
+.contact-methods-section,
+.contact-request-section {
+  width: min(1280px, calc(100% - 48px));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.contact-breadcrumb {
+  padding-top: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-intro-panel {
+  padding: 42px 0 24px;
+  text-align: center;
+}
+
+.contact-intro-panel h1 {
+  max-width: 760px;
+  margin: 0 auto 14px;
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.18;
+}
+
+.contact-intro-panel p:not(.eyebrow) {
+  max-width: 760px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.contact-methods-section {
+  padding: 28px 0 54px;
+}
+
+.contact-overview-grid {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 28px;
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto 54px;
+  align-items: start;
+}
+
+.contact-info-board {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.contact-info-board h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.contact-info-board ul {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 22px;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.contact-info-board address {
+  color: var(--green-dark);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.contact-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contact-method-card {
+  display: grid;
+  gap: 6px;
+  min-height: 92px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(16, 32, 38, 0.06);
+}
+
+.contact-method-card span {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.contact-method-card strong {
+  color: var(--ink);
+  font-size: clamp(15px, 1.2vw, 18px);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.contact-method-card small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.contact-request-section {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  padding: 44px 0 70px;
+  border-top: 1px solid var(--line);
+}
+
+.contact-request-copy {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.contact-request-copy h2 {
+  margin-top: 0;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.2;
+}
+
+.contact-request-copy ul {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 24px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.contact-request-copy address {
+  color: var(--green-dark);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.contact-request-form {
+  margin: 0;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .contact-overview-grid,
+  .contact-methods-grid,
+  .contact-request-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-overview-grid,
+  .contact-request-section {
+    width: min(100% - 32px, 720px);
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-breadcrumb,
+  .contact-intro-panel,
+  .contact-methods-section,
+  .contact-request-section {
+    width: min(100% - 28px, 720px);
   }
 }
