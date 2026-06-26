@@ -4377,3 +4377,38 @@ body.home-en:not(.home-ar) .product-more-row {
     width: min(100% - 28px, 720px);
   }
 }
+
+/* Browser translation stability: prevent injected font tags and longer translated
+   labels from stretching nav, sidebars, or product cards. */
+.nav-links,
+.nav-actions,
+.dropdown-panel,
+.product-sidebar,
+.product-sidebar-list,
+.product-sidebar-parent,
+.product-sidebar-links,
+.ru-product-card,
+.ru-product-card > a:first-child,
+.ru-product-card-body,
+.contact-method-card {
+  min-width: 0;
+}
+
+.nav-main-link,
+.nav-quick-link,
+.language-button,
+.dropdown-panel a,
+.product-sidebar-parent,
+.product-sidebar-links a,
+.ru-product-card-body h3,
+.ru-product-card-body p,
+.contact-method-card strong {
+  overflow-wrap: anywhere;
+}
+
+html.translated-ltr font,
+html.translated-rtl font,
+body > .skiptranslate font,
+font {
+  line-height: inherit;
+}
