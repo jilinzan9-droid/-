@@ -4382,7 +4382,6 @@ body.home-en:not(.home-ar) .product-more-row {
    labels from stretching nav, sidebars, or product cards. */
 .nav-links,
 .nav-actions,
-.dropdown-panel,
 .product-sidebar,
 .product-sidebar-list,
 .product-sidebar-parent,
@@ -4397,13 +4396,22 @@ body.home-en:not(.home-ar) .product-more-row {
 .nav-main-link,
 .nav-quick-link,
 .language-button,
-.dropdown-panel a,
 .product-sidebar-parent,
 .product-sidebar-links a,
 .ru-product-card-body h3,
 .ru-product-card-body p,
 .contact-method-card strong {
   overflow-wrap: anywhere;
+}
+
+.nav-dropdown .dropdown-panel {
+  min-width: 310px;
+  max-width: min(420px, calc(100vw - 32px));
+}
+
+.nav-dropdown .dropdown-panel a {
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 
 html.translated-ltr font,
